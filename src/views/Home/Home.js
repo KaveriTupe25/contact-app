@@ -24,6 +24,9 @@ export default function Home() {
             email: 'urmila@gmail.com'
         }
     ]);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [mobile, setMobile] = useState('');
     return ( <
             div >
             <
@@ -50,7 +53,22 @@ export default function Home() {
         <
         div className = "contacts-add-container" >
         <
-        h2 className = 'container-names' > Add Contacts < /h2> < /
+        h2 className = 'container-names' > Add Contacts < /h2>  <
+    input type = 'text'
+    placeholder = 'Name'
+    className = 'user-input' / >
+        <
+        input type = 'email'
+    placeholder = 'Email'
+    className = 'user-input' / >
+        <
+        input type = 'text'
+    placeholder = 'Mobile'
+    maxLength = { 10 }
+    className = 'user-input' / >
+
+        <
+        button className = 'add-contact-btn' > Add Contact < /button> < /
     div >
 
         <

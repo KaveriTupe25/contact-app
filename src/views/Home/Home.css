@@ -19,7 +19,20 @@ body {
     font-size: 27px;
 }
 
-.contacts-add-container {
-    background-color: white;
-    width: 400px;
+.user-input {
+    display: block;
+    padding: 5px;
+    margin: 20px;
+}
+
+.add-contact-btn {
+    display: block;
+    padding: 5px;
+    margin: 30px;
+    font-size: 23px;
+    border-radius: 10px;
+    background-color: #e65c00;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
 }
