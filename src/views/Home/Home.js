@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Home.css';
+import ContactCard from '../../components/ContactCard/ContactCard';
 
 export default function Home() {
     const [contacts, setContacts] = useState([{
@@ -36,16 +37,11 @@ export default function Home() {
             <
             h2 className = 'container-names' > Show Contacts < /h2>  {
             contacts.map((contact, index) => {
-                const { name, mobile, email } = contact; //destructuring
-                return ( <
-                    div className = 'contact-card'
-                    key = { index } >
-                    <
-                    p className = 'contact-name m-2' > 🦝{ name } < /p> <
-                    p className = 'contact-mobile m-2' > 📞{ mobile } < /p> <
-                    p className = 'contact-email m-2' > ✉{ email } < /p> < /
-                    div >
-                )
+                return <ContactCard key = { index }
+                name = { contact.name }
+                email = { contact.email }
+                mobile = { contact.mobile }
+                / >
             })
         } <
         /
