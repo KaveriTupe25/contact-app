@@ -11,12 +11,7 @@ body {
 .app-body {
     justify-content: space-around;
     display: flex;
-}
-
-.contacts-container {
-    width: 350px;
-    height: 500px;
-    background-color: white;
+    flex-wrap: wrap;
 }
 
 .container-names {
@@ -27,7 +22,26 @@ body {
 .contact-card {
     width: 400px;
     padding: 5px;
-    margin: 5px;
+    margin-top: 20px;
     border-radius: 15px;
-    background-color: #ffa366;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+}
+
+.contact-name {
+    font-size: 20px;
+    margin: 1px 1px;
+}
+
+.contact-mobile {
+    font-size: 20px;
+}
+
+.m-2 {
+    margin: 2px;
+}
+
+.contacts-add-container {
+    background-color: white;
+    width: 400px;
 }

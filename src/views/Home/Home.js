@@ -36,11 +36,15 @@ export default function Home() {
             <
             h2 className = 'container-names' > Show Contacts < /h2>  {
             contacts.map((contact, index) => {
+                const { name, mobile, email } = contact; //destructuring
                 return ( <
-                    div className = 'contact-card' >
-
+                    div className = 'contact-card'
+                    key = { index } >
                     <
-                    /div>
+                    p className = 'contact-name m-2' > 🦝{ name } < /p> <
+                    p className = 'contact-mobile m-2' > 📞{ mobile } < /p> <
+                    p className = 'contact-email m-2' > ✉{ email } < /p> < /
+                    div >
                 )
             })
         } <
@@ -48,7 +52,7 @@ export default function Home() {
     div >
 
         <
-        div className = "contacts-container" >
+        div className = "contacts-add-container" >
         <
         h2 className = 'container-names' > Add Contacts < /h2> < /
     div >
