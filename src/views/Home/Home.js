@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Home.css';
 import ContactCard from '../../components/ContactCard/ContactCard';
+import showToast from 'crunchy-toast';
 
 export default function Home() {
     const [contacts, setContacts] = useState([{
@@ -34,6 +35,11 @@ export default function Home() {
             mobile: mobile
         }
         setContacts([...contacts, obj]);
+
+        showToast('Contact added successfully');
+        setName('');
+        setEmail('');
+        setMobile('');
     };
 
     return ( <
