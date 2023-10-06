@@ -53,22 +53,38 @@ export default function Home() {
         <
         div className = "contacts-add-container" >
         <
-        h2 className = 'container-names' > Add Contacts < /h2>  <
+        h2 className = 'container-names' > Add Contacts < /h2>   <
     input type = 'text'
     placeholder = 'Name'
-    className = 'user-input' / >
-        <
-        input type = 'email'
+    className = 'user-input'
+    onChange = {
+        (e) => {
+            setName(e.target.value);
+        }
+    }
+    / >   <
+    input type = 'email'
     placeholder = 'Email'
-    className = 'user-input' / >
-        <
-        input type = 'text'
+    className = 'user-input'
+    onChange = {
+        (e) => {
+            setEmail(e.target.value);
+        }
+    }
+    / >  <
+    input type = 'text'
     placeholder = 'Mobile'
     maxLength = { 10 }
-    className = 'user-input' / >
+    className = 'user-input'
+    onChange = {
+        (e) => {
+            setMobile(e.target.value);
+        }
+    }
+    / >
 
-        <
-        button className = 'add-contact-btn' > Add Contact < /button> < /
+    <
+    button className = 'add-contact-btn' > Add Contact < /button> < /
     div >
 
         <
