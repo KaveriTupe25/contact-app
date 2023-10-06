@@ -27,6 +27,15 @@ export default function Home() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [mobile, setMobile] = useState('');
+    const addContact = () => {
+        const obj = {
+            name: name,
+            email: email,
+            mobile: mobile
+        }
+        setContacts([...contacts, obj]);
+    };
+
     return ( <
             div >
             <
@@ -84,7 +93,8 @@ export default function Home() {
     / >
 
     <
-    button className = 'add-contact-btn' > Add Contact < /button> < /
+    button className = 'add-contact-btn'
+    onClick = { addContact } > Add Contact < /button> < /
     div >
 
         <
